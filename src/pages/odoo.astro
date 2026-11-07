@@ -1,0 +1,96 @@
+---
+title: Odoo ERP Solutions | Implementation & Customization
+description: Expert Odoo ERP implementation, customization, migration, and API integrations for manufacturing, inventory, accounting, HR, and CRM.
+lang: en
+---
+
+import { Layout } from '../components/Layout';
+import { ChevronRight } from 'lucide-react';
+
+export default function Odoo() {
+  const modules = [
+    { title: 'Manufacturing', desc: 'Production planning, scheduling, and shop floor control.' },
+    { title: 'Inventory', desc: 'Warehouse management, stock tracking, and procurement.' },
+    { title: 'Accounting', desc: 'Financial reporting, tax rules, journals, and compliance.' },
+    { title: 'HR & CRM', desc: 'Employee management, recruitment, and customer relationship.' },
+    { title: 'Business Workflows', desc: 'Automation, API integrations, and custom module development.' }
+  ];
+
+  return (
+    <Layout>
+      {/* Odoo Hero */}
+      <section className="relative pt-20 pb-24 overflow-hidden bg-[#0A0F1E]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl">
+            <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
+              Odoo ERP Solutions <br />
+              <span className="text-[#FBBF24]">Implementation & Customization</span>
+            </h1>
+            <p className="text-xl text-[#CBD5E1] leading-relaxed">
+              Specialized Odoo implementation, configuration, and module development for manufacturing, retail, jewelry, construction, fashion, healthcare, finance, and education.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Expertise Section */}
+      <section className="py-20 bg-[#111827]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="section-title">Odoo Expertise</h2>
+            <p className="text-xl text-[#CBD5E1] max-w-2xl mx-auto">
+              Deep functional knowledge and technical excellence in Odoo implementation and customization.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {modules.map((mod, idx) => (
+              <div key={idx} className="card group">
+                <h3 className="text-white font-bold text-xl mb-3">{mod.title}</h3>
+                <p className="text-[#CBD5E1] text-sm leading-relaxed">{mod.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Implementation Approach */}
+      <section className="py-20 bg-[#0A0F1E]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="section-title">Implementation Process</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { title: 'Analysis', desc: 'Functional consulting, business analysis, and requirement gathering.' },
+              { title: 'Development', desc: 'Module customization, API integration, and migration from legacy systems.' },
+              { title: 'Support', desc: 'Technical support, maintenance, and upgrades for seamless operations.' }
+            ].map((step, idx) => (
+              <div key={idx} className="card relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-16 h-16 bg-[#6366F1]/10 rounded-full flex items-center justify-center text-[#6366F1] font-bold">
+                  {idx + 1}
+                </div>
+                <h3 className="text-white font-bold text-xl mb-3 mt-4">{step.title}</h3>
+                <p className="text-[#CBD5E1] text-sm">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-20 bg-[#111827]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="section-title">Start Your Odoo Journey</h2>
+          <p className="text-xl text-[#CBD5E1] mb-8 max-w-2xl mx-auto">
+            Contact our senior Odoo experts for implementation, customization, or migration support.
+          </p>
+          <a href="/contact" className="btn-primary inline-flex items-center justify-center gap-2">
+            Consult Experts <ChevronRight className="w-5 h-5" />
+          </a>
+        </div>
+      </section>
+    </Layout>
+  );
+}

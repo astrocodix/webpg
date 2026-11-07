@@ -1,0 +1,70 @@
+---
+title: Astro Gold | Jewelry & Gold Business Management
+description: Specialized software for jewelry and gold businesses: inventory, pricing, sales analytics, and multi-location support.
+lang: en
+---
+
+import { Layout } from '../components/Layout';
+import { ChevronRight } from 'lucide-react';
+
+export default function AstroGold() {
+  return (
+    <Layout>
+      {/* Product Hero */}
+      <section className="relative pt-20 pb-24 overflow-hidden bg-[#0A0F1E]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl">
+            <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
+              Astro Gold <br />
+              <span className="text-[#FBBF24]">Jewelry Management</span>
+            </h1>
+            <p className="text-xl text-[#CBD5E1] leading-relaxed">
+              Specialized software for jewelry and gold businesses with inventory tracking, pricing, and sales analytics.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-[#111827]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="section-title">Specialized Features</h2>
+            <p className="text-xl text-[#CBD5E1] max-w-2xl mx-auto">
+              Tailored for jewelry and gold business management with inventory, pricing, and analytics.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { title: 'Jewelry Inventory', desc: 'Tracking, stock management, and valuation for jewelry items.' },
+              { title: 'Gold Pricing', desc: 'Real-time gold pricing, valuation, and market integration.' },
+              { title: 'Sales Analytics', desc: 'Customer analytics, sales reporting, and business insights.' },
+              { title: 'Multi-location', desc: 'Support for multiple stores, branches, and regional operations.' },
+              { title: 'ERP Integration', desc: 'Seamless integration with accounting, HR, and CRM modules.' },
+              { title: 'Technical Support', desc: 'Implementation, upgrades, maintenance, and consulting.' }
+            ].map((mod, idx) => (
+              <div key={idx} className="card group">
+                <h3 className="text-white font-bold text-xl mb-3">{mod.title}</h3>
+                <p className="text-[#CBD5E1] text-sm leading-relaxed">{mod.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-20 bg-[#0A0F1E]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="section-title">Implement Astro Gold</h2>
+          <p className="text-xl text-[#CBD5E1] mb-8 max-w-2xl mx-auto">
+            Contact our senior experts for Astro Gold implementation, customization, or migration support.
+          </p>
+          <a href="/contact" className="btn-primary inline-flex items-center justify-center gap-2">
+            Consult Experts <ChevronRight className="w-5 h-5" />
+          </a>
+        </div>
+      </section>
+    </Layout>
+  );
+}

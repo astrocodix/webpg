@@ -1,0 +1,70 @@
+---
+title: Digital Transformation | Business Process Automation
+description: Business process automation, operational optimization, ERP consulting, and technology strategy.
+lang: en
+---
+
+import { Layout } from '../components/Layout';
+import { ChevronRight } from 'lucide-react';
+
+export default function Transformation() {
+  return (
+    <Layout>
+      {/* Transformation Hero */}
+      <section className="relative pt-20 pb-24 overflow-hidden bg-[#0A0F1E]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl">
+            <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
+              Digital Transformation <br />
+              <span className="text-[#FBBF24]">Operational Excellence</span>
+            </h1>
+            <p className="text-xl text-[#CBD5E1] leading-relaxed">
+              Business process automation, operational optimization, ERP consulting, and technology strategy.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-[#111827]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="section-title">Transformation Services</h2>
+            <p className="text-xl text-[#CBD5E1] max-w-2xl mx-auto">
+              Business process automation, operational optimization, ERP consulting, and technology strategy.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { title: 'Process Automation', desc: 'Business process automation and workflow optimization.' },
+              { title: 'Operational Optimization', desc: 'Efficiency improvements and operational streamlining.' },
+              { title: 'ERP Consulting', desc: 'Odoo ERP consulting, implementation strategy, and migration.' },
+              { title: 'Technology Strategy', desc: 'Enterprise technology strategy and system integration planning.' },
+              { title: 'System Integration', desc: 'Third-party system integrations and API connectivity.' },
+              { title: 'Business Analysis', desc: 'Functional consulting and business requirement analysis.' }
+            ].map((mod, idx) => (
+              <div key={idx} className="card group">
+                <h3 className="text-white font-bold text-xl mb-3">{mod.title}</h3>
+                <p className="text-[#CBD5E1] text-sm leading-relaxed">{mod.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-20 bg-[#0A0F1E]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="section-title">Transform Your Business</h2>
+          <p className="text-xl text-[#CBD5E1] mb-8 max-w-2xl mx-auto">
+            Contact our senior experts for digital transformation, automation, or strategy consulting.
+          </p>
+          <a href="/contact" className="btn-primary inline-flex items-center justify-center gap-2">
+            Consult Experts <ChevronRight className="w-5 h-5" />
+          </a>
+        </div>
+      </section>
+    </Layout>
+  );
+}
