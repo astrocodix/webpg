@@ -1,0 +1,70 @@
+---
+title: Astro ERP | Proprietary Enterprise ERP Solution
+description: Astro ERP: Manufacturing, inventory, accounting, HR, CRM, and business workflow automation for global enterprises.
+lang: en
+---
+
+import { Layout } from '../components/Layout';
+import { ChevronRight } from 'lucide-react';
+
+export default function AstroERP() {
+  return (
+    <Layout>
+      {/* Product Hero */}
+      <section className="relative pt-20 pb-24 overflow-hidden bg-[#0A0F1E]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl">
+            <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
+              Astro ERP <br />
+              <span className="text-[#FBBF24]">Enterprise Management</span>
+            </h1>
+            <p className="text-xl text-[#CBD5E1] leading-relaxed">
+              Proprietary ERP solution for manufacturing, retail, construction, fashion, healthcare, finance, and education sectors.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-[#111827]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="section-title">Core Modules</h2>
+            <p className="text-xl text-[#CBD5E1] max-w-2xl mx-auto">
+              Integrated business management with manufacturing, inventory, accounting, HR, and CRM.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { title: 'Manufacturing & Inventory', desc: 'Production planning, scheduling, warehouse management, and stock tracking.' },
+              { title: 'Accounting & Finance', desc: 'Financial reporting, tax rules, journals, and compliance management.' },
+              { title: 'HR & CRM', desc: 'Employee management, recruitment, customer relationship, and sales.' },
+              { title: 'Business Workflows', desc: 'Automation, API integrations, and custom module development.' },
+              { title: 'API Integrations', desc: 'Third-party system integrations and custom business logic.' },
+              { title: 'Technical Support', desc: 'Implementation, upgrades, maintenance, and consulting.' }
+            ].map((mod, idx) => (
+              <div key={idx} className="card group">
+                <h3 className="text-white font-bold text-xl mb-3">{mod.title}</h3>
+                <p className="text-[#CBD5E1] text-sm leading-relaxed">{mod.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-20 bg-[#0A0F1E]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="section-title">Implement Astro ERP</h2>
+          <p className="text-xl text-[#CBD5E1] mb-8 max-w-2xl mx-auto">
+            Contact our senior experts for Astro ERP implementation, customization, or migration support.
+          </p>
+          <a href="/contact" className="btn-primary inline-flex items-center justify-center gap-2">
+            Consult Experts <ChevronRight className="w-5 h-5" />
+          </a>
+        </div>
+      </section>
+    </Layout>
+  );
+}

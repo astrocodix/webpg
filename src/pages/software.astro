@@ -1,0 +1,70 @@
+---
+title: Custom Software Development | Enterprise Solutions
+description: Custom business management systems, workflow automation, and third-party system integrations.
+lang: en
+---
+
+import { Layout } from '../components/Layout';
+import { ChevronRight } from 'lucide-react';
+
+export default function Software() {
+  return (
+    <Layout>
+      {/* Software Hero */}
+      <section className="relative pt-20 pb-24 overflow-hidden bg-[#0A0F1E]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl">
+            <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
+              Custom Software Development <br />
+              <span className="text-[#FBBF24]">Enterprise Solutions</span>
+            </h1>
+            <p className="text-xl text-[#CBD5E1] leading-relaxed">
+              Custom business management systems, workflow automation, and third-party system integrations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-[#111827]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="section-title">Development Capabilities</h2>
+            <p className="text-xl text-[#CBD5E1] max-w-2xl mx-auto">
+              Enterprise software, business portals, SaaS platforms, and custom dashboards.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { title: 'Enterprise Software', desc: 'Custom business management systems and enterprise applications.' },
+              { title: 'Workflow Automation', desc: 'Business process automation and operational optimization.' },
+              { title: 'Third-party Integration', desc: 'API integrations and system connectivity for modern enterprises.' },
+              { title: 'Business Portals', desc: 'Customer, partner, and employee portals with secure access.' },
+              { title: 'SaaS Platforms', desc: 'Scalable software-as-a-service solutions for global enterprises.' },
+              { title: 'Custom Dashboards', desc: 'Management systems and analytics dashboards for decision making.' }
+            ].map((mod, idx) => (
+              <div key={idx} className="card group">
+                <h3 className="text-white font-bold text-xl mb-3">{mod.title}</h3>
+                <p className="text-[#CBD5E1] text-sm leading-relaxed">{mod.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-20 bg-[#0A0F1E]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="section-title">Build Custom Software</h2>
+          <p className="text-xl text-[#CBD5E1] mb-8 max-w-2xl mx-auto">
+            Contact our senior experts for custom software development, workflow automation, or integration support.
+          </p>
+          <a href="/contact" className="btn-primary inline-flex items-center justify-center gap-2">
+            Consult Experts <ChevronRight className="w-5 h-5" />
+          </a>
+        </div>
+      </section>
+    </Layout>
+  );
+}

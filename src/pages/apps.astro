@@ -1,0 +1,70 @@
+---
+title: Web & Mobile Applications | Enterprise Portals & SaaS
+description: Enterprise web applications, business portals, SaaS platforms, and cross-platform mobile solutions.
+lang: en
+---
+
+import { Layout } from '../components/Layout';
+import { ChevronRight } from 'lucide-react';
+
+export default function Apps() {
+  return (
+    <Layout>
+      {/* Apps Hero */}
+      <section className="relative pt-20 pb-24 overflow-hidden bg-[#0A0F1E]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl">
+            <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
+              Web & Mobile Applications <br />
+              <span className="text-[#FBBF24]">Enterprise Portals</span>
+            </h1>
+            <p className="text-xl text-[#CBD5E1] leading-relaxed">
+              Enterprise web applications, business portals, SaaS platforms, and cross-platform mobile solutions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-[#111827]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="section-title">Application Development</h2>
+            <p className="text-xl text-[#CBD5E1] max-w-2xl mx-auto">
+              Web applications, business portals, SaaS platforms, and mobile solutions for Android, iOS, and cross-platform.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { title: 'Enterprise Web Apps', desc: 'Custom web applications for business management and operations.' },
+              { title: 'Business Portals', desc: 'Customer, partner, and employee portals with secure access.' },
+              { title: 'SaaS Platforms', desc: 'Scalable software-as-a-service solutions for global enterprises.' },
+              { title: 'Android Apps', desc: 'Native Android applications for business operations and management.' },
+              { title: 'iOS Apps', desc: 'Native iOS applications for enterprise mobility and management.' },
+              { title: 'Cross-platform', desc: 'Cross-platform mobile solutions for Android and iOS.' }
+            ].map((mod, idx) => (
+              <div key={idx} className="card group">
+                <h3 className="text-white font-bold text-xl mb-3">{mod.title}</h3>
+                <p className="text-[#CBD5E1] text-sm leading-relaxed">{mod.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-20 bg-[#0A0F1E]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="section-title">Build Applications</h2>
+          <p className="text-xl text-[#CBD5E1] mb-8 max-w-2xl mx-auto">
+            Contact our senior experts for web, mobile, or SaaS application development support.
+          </p>
+          <a href="/contact" className="btn-primary inline-flex items-center justify-center gap-2">
+            Consult Experts <ChevronRight className="w-5 h-5" />
+          </a>
+        </div>
+      </section>
+    </Layout>
+  );
+}

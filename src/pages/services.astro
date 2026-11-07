@@ -1,0 +1,77 @@
+---
+title: Services | Odoo ERP, Custom Software & Digital Transformation
+description: Comprehensive enterprise services including Odoo ERP solutions, custom software development, web & mobile applications, and digital transformation.
+lang: en
+---
+
+import { Layout } from '../components/Layout';
+import { ChevronRight } from 'lucide-react';
+
+export default function Services() {
+  const services = [
+    {
+      id: 'odoo',
+      title: 'Odoo ERP Solutions',
+      description: 'Implementation, customization, migration, and API integrations for manufacturing, inventory, accounting, HR, and CRM.',
+      href: '/odoo',
+      icon: 'ERP'
+    },
+    {
+      id: 'software',
+      title: 'Custom Software Development',
+      description: 'Enterprise software solutions, custom business management systems, and workflow automation.',
+      href: '/software',
+      icon: 'Code'
+    },
+    {
+      id: 'apps',
+      title: 'Web & Mobile Applications',
+      description: 'Enterprise web applications, business portals, SaaS platforms, and cross-platform mobile solutions.',
+      href: '/apps',
+      icon: 'Globe'
+    },
+    {
+      id: 'transformation',
+      title: 'Digital Transformation',
+      description: 'Business process automation, operational optimization, and technology strategy.',
+      href: '/transformation',
+      icon: 'Zap'
+    }
+  ];
+
+  return (
+    <Layout>
+      {/* Services Hero */}
+      <section className="relative pt-20 pb-24 overflow-hidden bg-[#0A0F1E]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl">
+            <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
+              Enterprise Solutions <br />
+              <span className="text-[#FBBF24]">Tailored for Your Business</span>
+            </h1>
+            <p className="text-xl text-[#CBD5E1] leading-relaxed">
+              Comprehensive services designed to optimize operations, scale technology, and drive digital transformation across global industries.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20 bg-[#111827]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
+            {services.map((service) => (
+              <div key={service.id} className="card group hover:-translate-y-1 transition-transform duration-300">
+                <h3 className="text-white font-bold text-2xl mb-4">{service.title}</h3>
+                <p className="text-[#CBD5E1] text-sm leading-relaxed mb-6">{service.description}</p>
+                <a href={service.href} className="text-[#6366F1] hover:text-[#FBBF24] font-medium text-sm flex items-center gap-1 transition-colors">
+                  Explore Service <ChevronRight className="w-4 h-4" />
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+}
